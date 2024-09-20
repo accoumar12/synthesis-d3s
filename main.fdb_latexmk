@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1726845091.5317 "/home/maccou/perso/internship_D3S/synthesis/main.tex" "main.pdf" "main" 1726845092.30579 0
-  "/home/maccou/perso/internship_D3S/synthesis/main.tex" 1726845090.57325 12329 670048db50358725fc0d1b3013e5fc96 ""
+["pdflatex"] 1726846789.92412 "/home/maccou/perso/internship_D3S/synthesis/main.tex" "main.pdf" "main" 1726846790.70091 0
+  "/home/maccou/perso/internship_D3S/synthesis/main.tex" 1726846789.73285 12319 c3cd927a5df27cb071a95c57059a7cf3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -80,14 +80,14 @@
   "algorithm.sty" 1726833484 2223 ada3eaa0c1bd465a639433dfafc2fc4e ""
   "algorithmic.sty" 1726833484 7414 ce084815cf0aab483787dbc4bf2ace9c ""
   "assets/clusters_tsne.png" 1726841531.85407 50823 4cec4df7302db716120813bdfabe7c75 ""
-  "assets/seg_0.png" 1726844720.41334 163577 bfedf95d7788b30409c550c342fa6e90 ""
+  "assets/seg_0.png" 1726845266.66321 163577 bfedf95d7788b30409c550c342fa6e90 ""
   "assets/similar-pieces.png" 1726841489.67408 30831 f44014b531a44dbc73f462baa2dee4db ""
   "assets/tinder3d_labeling.png" 1726841560.53407 165191 784cf756aee477f6331057dbd63a8efc ""
   "fancyhdr.sty" 1726833484 20521 e5d13d98d57bd53d4fed3aa61bd29c86 ""
   "icml2021.sty" 1726844550.64338 27182 fa63f5a2ec01a157ea1e3d8a5bba478f ""
-  "main.aux" 1726845092.25325 704 165f511d1ceba90e00308e6e20dd8d1b "pdflatex"
-  "main.out" 1726845091.87325 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1726845090.57325 12329 670048db50358725fc0d1b3013e5fc96 ""
+  "main.aux" 1726846790.65285 704 f0400a4ba2d580e10250078a072f4194 "pdflatex"
+  "main.out" 1726846790.27285 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1726846789.73285 12319 c3cd927a5df27cb071a95c57059a7cf3 ""
   (generated)
   "main.aux"
   "main.log"

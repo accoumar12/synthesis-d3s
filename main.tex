@@ -88,7 +88,7 @@ This research addresses the challenge of managing large, poorly labeled 3D CAD d
 \section{Introduction}
 \label{intro}
 
-D3S, a leader in 3D CAD Analytics and NLP, develops AI-powered solutions for industries like aerospace and automotive. Their current focus is on creating a 3D similarity model to compare CAD designs based solely on geometric properties (\autoref{fig:purpose}). This innovation addresses significant challenges in managing large CAD repositories, where inefficient design retrieval leads to time wastage, duplicated efforts, and missed opportunities for innovation.
+D3S, a leader in 3D CAD Analytics and NLP, develops AI-powered solutions for industries like aerospace and automotive. Their current focus is on \textbf{creating a 3D similarity model to compare CAD designs based solely on geometric properties} (\autoref{fig:purpose}). This innovation addresses significant challenges in managing large CAD repositories, where inefficient design retrieval leads to time wastage, duplicated efforts, and missed opportunities for innovation.
 
 \begin{figure}[h]
     \centering
@@ -97,15 +97,15 @@ D3S, a leader in 3D CAD Analytics and NLP, develops AI-powered solutions for ind
     \label{fig:purpose}
 \end{figure}
 Traditional manual classification methods have proven inconsistent and unscalable, prompting the need for an automated solution. The proposed 3D similarity model aims to streamline design comparison and retrieval, potentially transforming how engineers interact with vast design databases.
-Faced with limited labeled data, the team adopted a self-supervised learning approach using contrastive learning. They developed a novel 'Tinder-like' application to build a labeled triplets database, engaging the entire company in the process. 
+Faced with limited labeled data, we adopted a self-supervised learning approach using contrastive learning. We developed a novel 'Tinder-like' application to build a labeled triplets database.
 
-The project pipeline involves two main steps: triplet collection through this app, and model training to compute similarities between 3D designs.
+The project pipeline involves two main steps: \textbf{triplet collection through this app}, and \textbf{model training to compute similarities between 3D designs}.
 
 \section{Method}
 
 The proposed method for constructing a similarity model from an unlabeled dataset with a small proportion of labeled instances is generalizable beyond 3D CAD designs. The process involves generating unlabeled triplets, labeling them through a dedicated application, and training a model using triplet loss.
 
-A key component is the user-friendly labeling application, which serves two main purposes: labeling triplets and comparing model iterations. For labeling, users are presented with three 3D designs and must choose which is more similar to the central anchor design, as shown in \autoref{fig:labeling}. The app includes features like canonical view options and additional metadata to aid decision-making.
+\textbf{A key component is the user-friendly labeling application}, which serves two main purposes: labeling triplets and comparing model iterations. For labeling, users are presented with three 3D designs and must choose which is more similar to the central anchor design, as shown in \autoref{fig:labeling}. The app includes features like canonical view options and additional metadata to aid decision-making.
 
 \begin{figure}[h]
     \centering
@@ -126,13 +126,13 @@ This method has shown promising results, achieving accuracy comparable to classi
 The experiments for the 3D similarity model were conducted using a dataset of 20,000 triplets, with consistent training configurations across two main model architectures: Graph Neural Networks (GNN) and Transformer-based models.
 
 Data preparation involved converting meshes to graphs for the GNN model and to point clouds for the Transformer model. Data augmentation techniques, particularly random rotations and normalization to unit sphere, were employed to enhance model robustness and rotation invariance. Offline augmentation proved more effective than online augmentation.
-Several metrics were defined to evaluate model performance, including triplet order accuracy, rotation invariance measures, and test accuracy on a small labeled dataset. The team also relied heavily on qualitative assessment through a user interface.
+Several metrics were defined to evaluate model performance, including triplet order accuracy, rotation invariance measures, and test accuracy on a small labeled dataset. We also relied heavily on qualitative assessment through a user interface.
 
 The GNN model, based on EdgeConv architecture, showed initial promise but faced challenges in maintaining performance as training progressed. Key learnings included the importance of batch normalization, large batch sizes, and careful management of triplet loss training.
 
-The transition to Transformer-based models, particularly the OpenShape architecture, yielded significant improvements. The pre-trained model outperformed the best GNN model, and fine-tuning further enhanced results. The Transformer model demonstrated a better ability to learn correct triplet ordering and improve rotation invariance metrics throughout training.
+The transition to Transformer-based models, particularly the OpenShape architecture, yielded significant improvements. The pre-trained model outperformed the best GNN model, and fine-tuning further enhanced results. \textbf{The Transformer model demonstrated a better ability to learn correct triplet ordering and improve rotation invariance metrics throughout training}.
 
-Visualizations of the embeddings in 3D space, such as \autoref{fig:clusters}, revealed the model's capacity to cluster similar designs, even without explicit labels. However, the team noted that quantitative metrics didn't always align with qualitative assessments, highlighting the importance of human evaluation in this unsupervised learning context.
+Visualizations of the embeddings in 3D space, such as \autoref{fig:clusters}, revealed the model's capacity to cluster similar designs, even without explicit labels. However, we noted that quantitative metrics didn't always align with qualitative assessments, highlighting the importance of human evaluation in this unsupervised learning context.
 
 \begin{figure}[h]
     \centering
@@ -149,9 +149,9 @@ Key contributions include a method for generating diverse unlabeled triplets, a 
 
 Immediate applications include automated design optimization and integration with CAD software, particularly for suggesting improvements and inferring missing information.
 
-A natural follow-up is to explore 3D part segmentation, and first tries have shown promising results (\autoref{fig:seg}). 
+\textbf{A natural follow-up is to explore 3D part segmentation}, and first tries have shown promising results (\autoref{fig:seg}). 
 
-\begin{figure}[]
+\begin{figure}[h]
     \centering
     \includegraphics[width=.7\columnwidth]{assets/seg_0.png}
     \caption{Segmentation of a sheet metal design. In blue, the "deburring". In red, the "front" and the "back".}
