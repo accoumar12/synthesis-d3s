@@ -5,6 +5,7 @@
 % Recommended, but optional, packages for figures and better typesetting:
 \usepackage{microtype}
 \usepackage{graphicx}
+
 \usepackage{subfigure}
 \usepackage{booktabs} % for professional tables
 
@@ -18,10 +19,10 @@
 \newcommand{\theHalgorithm}{\arabic{algorithm}}
 
 % Use the following line for the initial blind version submitted for review:
-\usepackage{icml2021}
+% \usepackage{icml2021}
 
 % If accepted, instead use the following line for the camera-ready submission:
-% \usepackage[accepted]{icml2021}
+\usepackage[accepted]{icml2021}
 
 % \usepackage[
 % backend=biber,
@@ -56,10 +57,10 @@
 \icmlsetsymbol{equal}{*}
 
 \begin{icmlauthorlist}
-\icmlauthor{Martin ACCOY}{equal,to}
+\icmlauthor{Martin ACCOU}{}
 \end{icmlauthorlist}
 
-\icmlcorrespondingauthor{Martin ACCOU}{martin.accou@icloud.com}
+% \icmlcorrespondingauthor{Martin ACCOU}{martin.accou@icloud.com}
 
 % You may provide any keywords that you
 % find helpful for describing your paper; these are used to populate
@@ -77,8 +78,8 @@
 % The \icmlEqualContribution command is standard text for equal contribution.
 % Remove it (just {}) if you do not need this facility.
 
-%\printAffiliationsAndNotice{}  % leave blank if no need to mention equal contribution
-\printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text.
+% \printAffiliationsAndNotice{}  % leave blank if no need to mention equal contribution
+% \printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text.
 
 \begin{abstract}
 This research addresses the challenge of managing large, poorly labeled 3D CAD design repositories in industrial settings. We present a novel approach to developing a 3D similarity model using a combination of innovative triplet generation techniques, a user-friendly labeling application, and state-of-the-art deep learning models. Our method employs self-supervised learning with contrastive techniques to overcome the limitation of sparse labeled data. We developed a 'Tinder-like' application for efficient human labeling of design triplets and implemented an iterative process of model training and triplet generation. Experiments were conducted using both Graph Neural Network (GNN) and Transformer-based architectures, with the latter, specifically the OpenShape encoder, demonstrating superior performance in terms of accuracy, rotation invariance, and qualitative assessments. The resulting model shows promise in automating design comparison and retrieval, potentially transforming how engineers interact with vast design databases. Future work includes exploring multi-modal similarity models and implementing active learning strategies for more efficient triplet selection. This approach offers significant potential for enhancing design reuse and information retrieval in industrial CAD applications.
@@ -135,7 +136,7 @@ Visualizations of the embeddings in 3D space, such as \autoref{fig:clusters}, re
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\columnwidth]{assets/clusters_tsne.png}
+    \includegraphics[width=0.7\columnwidth]{assets/clusters_tsne.png}
     \caption{t-SNE visualization of the embeddings in 3D space.}
     \label{fig:clusters}
 \end{figure}
@@ -144,19 +145,24 @@ Visualizations of the embeddings in 3D space, such as \autoref{fig:clusters}, re
 
 This work presents a novel approach to 3D CAD design similarity in industrial settings, addressing the challenge of large, poorly labeled repositories. The developed pipeline combines innovative triplet generation, a user-friendly labeling application, and state-of-the-art deep learning models. 
 
-Key contributions include a method for generating diverse unlabeled triplets, a "Tinder-like" application for efficient human labeling, an iterative process of model training and triplet generation, and experimentation with both graph-based and transformer-based models.
+Key contributions include a method for generating diverse unlabeled triplets, a "Tinder-like" application for efficient human labeling, an iterative process of model training and triplet generation, and experimentation with both graph-based and transformer-based models. The transformer-based model yielded superior results across all metrics. 
 
-The transformer-based model, using the Openshape encoder architecture, yielded superior results across all metrics. 
+Immediate applications include automated design optimization and integration with CAD software, particularly for suggesting improvements and inferring missing information.
 
-Immediate applications include automated design optimization and integration with CAD software, particularly for suggesting improvements and inferring missing information. Future perspectives encompass developing multi-modal similarity models that integrate geometric data with textual descriptions and functional specifications, implementing active learning strategies for intelligent triplet selection, and exploring segmentation and part-based similarity. These advancements could significantly enhance design reuse and information retrieval in industrial settings, potentially revolutionizing approaches to complex design tasks and knowledge extraction from legacy designs.
+A natural follow-up is to explore 3D part segmentation, and first tries have shown promising results (\autoref{fig:seg}). 
+
+\begin{figure}[]
+    \centering
+    \includegraphics[width=.7\columnwidth]{assets/seg_0.png}
+    \caption{Segmentation of a sheet metal design. In blue, the "deburring". In red, the "front" and the "back".}
+    \label{fig:seg}
+\end{figure}
 
 % In the unusual situation where you want a paper to appear in the
 % references without citing it in the main text, use \nocite
 \nocite{langley00}
 
 % \printbibliography
-\bibliography{main}
-\bibliographystyle{icml2021}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
